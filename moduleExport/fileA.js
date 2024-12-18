@@ -7,6 +7,4 @@ const sayGB = () => {
   console.log("Good Bye")
 }
 
-
-
 module.exports = { sayHello, sayGB }

@@ -1,4 +1,5 @@
 let { Users } = require("../model/Users")
+const sequelize = require("sequelize")
 const controller = {}
 
 controller.index = (req, res) => {
@@ -25,14 +26,15 @@ controller.index = (req, res) => {
 
 controller.search = async (req, res) => {
   const searchField = req.query.name
+  console.log(searchField)
   // Users.findOne({where : { name : `%${searchField}%`}} ).then( u => {
-  Users.findAll({ where: { name: `%${searchField}%` } }).then(u => {
+  Users.findAll({ where: { name: {[sequelize.Op.like]: `%${searchField}%`} } }).then(u => {
     res.json(u)
   })
 }
 
 controller.show = (req, res) => {
-  Users.findByPK(parseInt(req.params.id)).then((user) => {
+  Users.findByPk(parseInt(req.params.id)).then((user) => {
     res.json(user)
   }).catch((err) => {
     res.status(400).json({ message: "User not found !" })

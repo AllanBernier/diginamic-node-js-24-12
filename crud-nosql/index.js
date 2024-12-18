@@ -14,7 +14,7 @@ app.listen(3000, () => {
   console.log("App running on port 3000")
 })
 
-mongoose.connect("mongodb+srv://root:root@cluster0.w7evgzl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").then( (data) => {
+mongoose.connect("mongodb://127.0.0.1:27017/products").then( (data) => {
   console.log("Connected")
 } ).catch( (err) => {
   console.log({message : "Not connected" , err})
@@ -33,5 +33,3 @@ app.post("/products", (req,res) => {
     res.json(err)
   })
 })
-
-
