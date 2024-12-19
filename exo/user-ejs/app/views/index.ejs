@@ -15,7 +15,7 @@
         <th>Name</th>
         <th>Age</th>
         <th>
-          <a href="">Créer</a>
+          <a href="/users/create">Créer</a>
         </th>
       </tr>
     </thead>
@@ -26,9 +26,9 @@
           <td><%= user.name %></td>
           <td><%= user.age %></td>
           <td>
-            <a href="">Voir</a>
+            <a href="/users/<%= user.id %>">Voir</a>
             <a href="/users/<%= user.id %>/edit">Modifier</a>
-            <a href="">Supprimer</a>
+            <a href="/users/<%= user.id %>/destroy">Supprimer</a>
           </td>
         </tr>
       <% }) %>
