@@ -7,4 +7,3 @@ while (i <  10000000000) {
 
 parentPort.postMessage("Worker finished")
 
-

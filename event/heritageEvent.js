@@ -46,3 +46,7 @@ myEvent.increment()
 myEvent.decrement()
 myEvent.getStatus()
 
+const emitter = new EventEmitter()
+
+
+
