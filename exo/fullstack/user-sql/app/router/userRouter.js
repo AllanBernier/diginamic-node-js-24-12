@@ -11,13 +11,3 @@ router.put("/users/:id", [nameIsPresent, ageIsPresentAndPositive], controller.up
 router.delete("/users/:id", controller.destroy)
 
 module.exports = router
-
-// react
-// next
-
-// vue 
-// nuxt
-
-// angular
-
-// vanilla JS
