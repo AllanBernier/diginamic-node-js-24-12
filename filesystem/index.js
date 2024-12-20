@@ -48,3 +48,12 @@ fs.readFile('exemple.txt', 'utf8', (err, data) => {
     console.log('Fichier modifié avec succès')
   })
 })
+
+// Création d'un fichier
+fs.writeFile('nouveau-fichier.txt', 'Contenu initial', 'utf8', (err) => {
+  if (err) {
+    console.error('Erreur lors de la création:', err)
+    return
+  }
+  console.log('Fichier créé avec succès')
+})
