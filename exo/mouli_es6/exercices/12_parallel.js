@@ -23,8 +23,8 @@ const urls = [
 ]
 
 const parallel = async () => {
-  return await Promise.all( urls.map( url => apiResponse(url) ) )
+  const result = await Promise.all( urls.map( (url) => apiResponse(url) ))
+  return result 
 }
-
 
 module.exports = { parallel };

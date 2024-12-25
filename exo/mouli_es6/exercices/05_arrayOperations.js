@@ -10,7 +10,7 @@
  * 
   */
 
-const multiplyByTwo 
+const multiplyByTwo = (tab) => tab.map( t => t * 2)
 
 /**
  * Utiliser la fonction .filter sur le tableau passé en paramètre
@@ -22,7 +22,7 @@ const multiplyByTwo
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const filterNameStartByA 
+const filterNameStartByA = (tab) => tab.filter( t => t.charAt(0) === "A" )
 // 5 == "5" // true
 // 5 ==="5" // false
 
@@ -38,7 +38,7 @@ const filterNameStartByA
 
 const array = [1,2,3,4,5]
 
-const sum 
+const sum = (array) => array.reduce( (acc, b) => acc + b , 0)
 /**
  * Utiliser la fonction .find sur le tableau passé en paramètre
  * retourne l'utilisateur qui a l'id passé en 2e paramètre
@@ -58,6 +58,14 @@ const sum
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const findUserById 
+const findUserById = (array, id) => array.find( t => t.id === id ).name
+
+
+console.log(findUserById([
+    {id: 1, name: 'John'},
+    {id: 2, name: 'Doe'},
+    {id: 3, name: 'Foo'},
+    {id: 4, name: 'Bar'},
+   ], 3))
 
 module.exports = {multiplyByTwo, filterNameStartByA, sum, findUserById};

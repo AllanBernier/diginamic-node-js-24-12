@@ -1,3 +1,4 @@
+
 /**
  * utilisez l'opérateur de chaine ?. pour accéder au nom du groupe auquel appartient l'utilisateur
  * Attention, l'utilisateur peut ne pas avoir de groupe (null)
@@ -15,7 +16,7 @@
  *
  */
 
-const getGroupName 
+const getGroupName = (obj) => obj?.group?.name
 
 
 
